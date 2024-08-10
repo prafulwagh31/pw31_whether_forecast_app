@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.container {
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+input {
+  outline: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .card {
+    width: -webkit-fill-available;
+  }
+}

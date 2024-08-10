@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather Forecast App</title>
+    <link rel="icon" href="./img/weather-news.png">
+    <link rel="stylesheet" href="./input.css">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="relative">
+    <h2 class="text-center text-3xl font-bold py-4 bg-blue-700 text-[#ffffff]">
+        Weather Forecast Application
+    </h2>
+
+    <main class="container py-8 flex flex-col lg:flex-row gap-8 px-8 bg-blue-100 text-white">
+        <section class="cityName lg:w-[30%] xl-w-[30%]">
+            <h3 class="font-bold text-xl text-black">Enter City Name</h3>
+            <input type="text" placeholder="E.g. New York, London, Tokyo" class="px-4 py-2 my-2 block w-full text-black"
+                required />
+            <button id="search" class="btn w-full mt-2 bg-blue-700 hover:bg-blue-800 px-4 py-2">
+                Search
+            </button>
+            <h4 class="my-2 text-center text-xl text-black">------------- OR -------------</h4>
+            <button id="currentLocation" class="btn w-full bg-blue-700 hover:bg-blue-800 px-4 py-2">
+                Current Location
+            </button>
+            <div class="prevCities">
+                <h2 class="my-2 font-bold text-xl text-black">Previous City</h2>
+                <select name="cities" id="cities" class="text-black p-2 w-full outline-none">
+                    <option value="" selected disabled>Select City</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="lg:w-[60%] xl:w-full">
+            <div
+                class="backdrop-blur-sm bg-blue-700 border border-white w-full flex-col-reverse sm:flex-row flex justify-between p-4 my-4">
+                <div class="data text-xl">
+                    <h3 class="text-2xl font-bold">
+                        <span id="defaultCity">London </span>
+                        <span id="date">(2024-04-23)</span>
+                    </h3>
+                    <p>Temperature: <span id="defaultTemp">10.0°C</span></p>
+                    <p>Wind: <span id="defaultWind">2.85 M/S</span></p>
+                    <p>Humidity: <span id="defaultHumidity">74 %</span></p>
+                </div>
+                <div class="icon">
+                    <img id="defaultImg" src="./img/cloud.png" width="100px" alt="" />
+                    <p id="feels">Light Rain</p>
+                </div>
+            </div>
+
+            <!-- showing forecast of 5 days -->
+            <div class="futureForecast">
+                <h2 class="text-2xl py-4 font-bold text-black">5-Day Forecast</h2>
+                <div class="cards justify-start xl:justify-between flex flex-wrap xl:flex-nowrap lg:flex-row gap-4 cursor-pointer">
+                    <div class="card w-full xs:w-[13rem] p-4 backdrop-blur-sm bg-blue-600 transition-all hover:bg-blue-800 border border-white">
+                        <img src="./img/cloud.png" width="100px" />
+                        <h3>2024-04-24</h3>
+                        <p>Temperature: 9.05 °C</p>
+                        <p>Wind: 3.56 M/S</p>
+                        <p>Humidity: 50 %</p>
+                    </div>
+
+                    <div class="card w-full xs:w-[13rem] p-4 backdrop-blur-sm bg-blue-600 transition-all hover:bg-blue-800 border border-white">
+                        <img src="./img/cloud.png" width="100px" />
+                        <h3>2024-04-25</h3>
+                        <p>Temperature: 10.50 °C</p>
+                        <p>Wind: 7.50 M/S</p>
+                        <p>Humidity: 90 %</p>
+                    </div>
+
+                    <div class="card w-full xs:w-[13rem] p-4 backdrop-blur-sm bg-blue-600 transition-all hover:bg-blue-800 border border-white">
+                        <img src="./img/cloud.png" width="100px" />
+                        <h3>2024-04-26</h3>
+                        <p>Temperature: 7.06 °C</p>
+                        <p>Wind: 2.85 M/S</p>
+                        <p>Humidity: 88 %</p>
+                    </div>
+
+                    <div class="card w-full xs:w-[13rem] p-4 backdrop-blur-sm bg-blue-600 transition-all hover:bg-blue-800 border border-white">
+                        <img src="./img/cloud.png" width="100px" />
+                        <h3>2024-04-27</h3>
+                        <p>Temperature: 8.06 °C</p>
+                        <p>Wind: 9.10 M/S</p>
+                        <p>Humidity: 95 %</p>
+                    </div>
+
+                    <div class="card w-full xs:w-[13rem] p-4 backdrop-blur-sm bg-blue-600 transition-all hover:bg-blue-800 border border-white">
+                        <img src="./img/cloud.png" width="100px" />
+                        <h3>2024-04-28</h3>
+                        <p>Temperature: 12.03 °C</p>
+                        <p>Wind: 8.85 M/S</p>
+                        <p>Humidity: 25 %</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
